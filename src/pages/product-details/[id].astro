@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+    const data = await fetch("products.json").then((response) =>
+        response.json()
+    );
+    return data.map((prod) => ({
+        params: { id: prod.id },
+        props: { prod },
+    }));
+}
+
+const { id } = Astro.params;
+const { prod } = Astro.props;
+---
+
+<Layout title="Nombre">
+    <main>
+        <h2>{prod.name}</h2>
+        <img src={`../../../${prod.src}`} alt="Product Image" />
+        <p>{prod.description}</p>
+    </main>
+</Layout>

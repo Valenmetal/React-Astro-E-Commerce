@@ -1,0 +1,192 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<header>
+    <h1 class="logo">Logo</h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav>
+        <ul>
+            <li>
+                <a href="#index">Home <Icon name="fe:home" class="icon" /></a>
+            </li>
+            <li>
+                <a href="#"
+                    >Contact <Icon name="ion:md-contact" class="icon" /></a
+                >
+            </li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+
+<style lang="scss">
+    :root {
+        --background: #1f2023b3;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    header {
+        background: var(--background);
+        backdrop-filter: blur(24px);
+        text-align: center;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+    }
+    nav {
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        left: 0;
+        background: var(--background);
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: all 0.3s;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            transition: all 0.3s;
+            font-weight: 700;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            margin: 5px;
+            width: 1.15em;
+            color: #ededed;
+            transition: all 0.3s;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            color: #888;
+            :first-child {
+                color: #888;
+            }
+        }
+    }
+    .nav-toggle {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: #eee;
+            height: 2px;
+            width: 2em;
+            border-radius: 2px;
+            position: relative;
+        }
+        span::before,
+        span::after {
+            content: "";
+            position: absolute;
+        }
+
+        span::before {
+            bottom: 7px;
+        }
+
+        span::after {
+            top: 7px;
+        }
+    }
+
+    .nav-toggle:checked ~ nav {
+        transform: scale(1, 1);
+
+        a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .nav-toggle-label {
+            display: none;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        }
+
+        .logo {
+            grid-column: 2 / 3;
+        }
+
+        nav {
+            all: unset;
+            position: relative;
+            text-align: left;
+            transition: none;
+            transform: scale(1, 1);
+            background: none;
+            top: initial;
+            left: initial;
+
+            grid-column: 3 / 4;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 3em;
+            margin-bottom: 0;
+        }
+
+        nav a {
+            opacity: 1;
+            position: relative;
+        }
+
+        nav a:hover::before {
+            transform: scale(1, 1);
+        }
+    }
+</style>

@@ -1,0 +1,30 @@
+<div class="hero">
+    <h1 class="title">Titulo <br /> Principal</h1>
+    <img
+        src="https://images8.alphacoders.com/419/419522.jpg"
+        alt="Hero Image"
+    />
+</div>
+
+<style lang="scss">
+    .hero {
+        img {
+            filter: blur(0.7px);
+            object-fit: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        .title {
+            z-index: 10;
+            font-size: var(--step-6);
+            font-weight: 800;
+            position: absolute;
+            letter-spacing: 5px;
+            top: 10%;
+            left: 5%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+    }
+</style>

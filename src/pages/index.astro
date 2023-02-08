@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Products from "../components/ProductsReact.jsx";
+import Hero from "../components/Hero.astro";
+
+const productList = await fetch("products.json").then((response) =>
+	response.json()
+);
+---
+
+<Layout title="Nombre">
+	<main>
+		<Hero />
+		<Products productList={productList} />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>

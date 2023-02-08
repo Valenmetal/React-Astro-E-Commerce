@@ -1,0 +1,87 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer class="footer_container">
+    <div class="footer_list">
+        <a href="" class="footer_item">Contacto</a>
+        <a href="" class="footer_item">Ubicacion</a>
+    </div>
+
+    <div class="footer-info">
+        <div class="brand">Marca</div>
+        <div class="social-container">
+            <Icon class="social-logo" name="ph:instagram-logo" />
+            <Icon class="social-logo" name="ph:whatsapp-logo-light" />
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    .footer_container {
+        bottom: 0em;
+        width: 100%;
+        background-color: var(--dark-grey);
+        color: var(--white);
+
+        .footer_list {
+            font-size: var(--step--1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5em;
+        }
+        .footer_item {
+            text-decoration: none;
+            color: var(--white);
+            margin-right: 1em;
+        }
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+
+            .brand {
+                align-self: center;
+                margin: 0 0 0 0.5em;
+            }
+            .social-container {
+                margin-right: 1%;
+                justify-content: end;
+
+                .social-logo {
+                    width: var(--step-1);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        transform: scale(1.09);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 765px) {
+            .footer_list {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 10em;
+
+                :nth-child(2) {
+                    margin-right: 0;
+                }
+
+                :nth-child(3) {
+                    margin-right: 0;
+                }
+
+                .footer_item {
+                    margin-top: 1em;
+                }
+            }
+            .brand {
+                margin: 0;
+                align-self: center;
+            }
+        }
+    }
+</style>
