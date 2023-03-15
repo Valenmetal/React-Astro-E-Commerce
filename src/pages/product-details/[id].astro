@@ -16,8 +16,82 @@ const { prod } = Astro.props;
 
 <Layout title="Nombre">
     <main>
-        <h2>{prod.name}</h2>
-        <img src={`../../../${prod.src}`} alt="Product Image" />
-        <p>{prod.description}</p>
+        <div class="product">
+            <h2 class="titulo-prod">{prod.name}</h2>
+            <div class="gallery">
+                <img class="prodImg" src={`../../../${prod.src}`} alt="Product Image" />
+
+                {
+                prod.src2 ?
+                <img class="prodImg" src={`../../../${prod.src2}`} alt="Product Image" />
+                : {}
+                }
+                {
+                prod.src3 ?
+                <img class="prodImg" src={`../../../${prod.src3}`} alt="Product Image" />
+                : {}
+                }
+                {
+                prod.src4 ?
+                <img class="prodImg" src={`../../../${prod.src4}`} alt="Product Image" />
+                : {}
+                }
+                {
+                prod.src5 ?
+                <img class="prodImg" src={`../../../${prod.src5}`} alt="Product Image" />
+                : {}
+                }
+                {
+                prod.src6 ?
+                <img class="prodImg" src={`../../../${prod.src6}`} alt="Product Image" />
+                : {}
+                }
+            </div>
+            <h3>Descripcion</h3>
+            <p>{prod.description_2}</p>
+        </div>
     </main>
 </Layout>
+
+<style>
+    main {
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+    .product {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery{
+        width: 100%;
+    }
+    .prodImg{
+        margin: 1rem;
+        height: 400px;
+    }
+
+    h2 {
+        margin-top: 9rem;
+        font-size: var(--step-2);
+    }
+    img {
+        align-self: center;
+        object-fit: contain;
+        width: 100%;
+        max-width: 400px;
+    }
+    h3 {
+        font-size: var(--step-1);
+        align-self: flex-start;
+        margin: 1rem;
+    }
+    p {
+        white-space:pre-wrap;
+        font-size: var(--step--2);
+        margin: 1rem;
+        color: #444;
+        align-self: flex-start;
+    }
+</style>
