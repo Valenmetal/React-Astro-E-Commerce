@@ -1,19 +1,20 @@
 <div class="hero">
-    <h1 class="title">Zingueria <br /> Marquez</h1>
-    <img src="/src/img/DSC_0363.jpg" alt="Hero Image" />
+    <h1 class="title">
+        Zingueria <br /> Marquez
+    </h1>
 </div>
 
 <style lang="scss">
     .hero {
-        img {
-            filter: blur(2px);
-            object-fit: cover;
-            height: 100vh;
-            width: 100%;
-        }
+        background: url("/src/img/chapa-fondo.jpg") no-repeat;
+        position: relative;
+        box-sizing: border-box;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
         .title {
             color: var(--white);
-            text-shadow: black -10px 10px 10px;
+            text-shadow: black -5px 5px 10px;
             z-index: 10;
             font-size: var(--step-6);
             font-weight: 800;

@@ -12,39 +12,41 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const { prod } = Astro.props;
+import { Icon } from "astro-icon";
 ---
 
-<Layout title="Nombre">
+<Layout title={prod.name}>
     <main>
         <div class="product">
+            <a class="backBtnPos" href="/#products"><button class="backBtn"><Icon name="charm:arrow-left" class="icon" />Atras</button></a>
             <h2 class="titulo-prod">{prod.name}</h2>
             <div class="gallery">
                 <img class="prodImg" src={`../../../${prod.src}`} alt="Product Image" />
-
+                
                 {
-                prod.src2 ?
-                <img class="prodImg" src={`../../../${prod.src2}`} alt="Product Image" />
-                : {}
+                    prod.src2 ?
+                    <img class="prodImg" src={`../../../${prod.src2}`} alt="Product Image" />
+                    : {}
                 }
                 {
-                prod.src3 ?
-                <img class="prodImg" src={`../../../${prod.src3}`} alt="Product Image" />
-                : {}
+                    prod.src3 ?
+                    <img class="prodImg" src={`../../../${prod.src3}`} alt="Product Image" />
+                    : {}
                 }
                 {
-                prod.src4 ?
-                <img class="prodImg" src={`../../../${prod.src4}`} alt="Product Image" />
-                : {}
+                    prod.src4 ?
+                    <img class="prodImg" src={`../../../${prod.src4}`} alt="Product Image" />
+                    : {}
                 }
                 {
-                prod.src5 ?
+                    prod.src5 ?
                 <img class="prodImg" src={`../../../${prod.src5}`} alt="Product Image" />
                 : {}
-                }
+            }
                 {
-                prod.src6 ?
-                <img class="prodImg" src={`../../../${prod.src6}`} alt="Product Image" />
-                : {}
+                    prod.src6 ?
+                    <img class="prodImg" src={`../../../${prod.src6}`} alt="Product Image" />
+                    : {}
                 }
             </div>
             <h3>Descripcion</h3>
@@ -64,8 +66,24 @@ const { prod } = Astro.props;
         flex-direction: column;
         align-items: center;
     }
+    .backBtnPos{
+        transform: scale(1.3);
+        align-self: flex-start;
+        margin: 8em 0 0 3em;
+    }
+    .backBtn{
+        cursor: pointer;
+        background-color: inherit;
+        border: 0;
+    }
+.icon{
+    width:1em;
+}
     .gallery{
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
     }
     .prodImg{
         margin: 1rem;
@@ -73,7 +91,7 @@ const { prod } = Astro.props;
     }
 
     h2 {
-        margin-top: 9rem;
+        margin-top: 1rem;
         font-size: var(--step-2);
     }
     img {
