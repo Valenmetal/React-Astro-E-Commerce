@@ -2,206 +2,226 @@
 import { Icon } from "astro-icon";
 ---
 
-<header>
-    <a href="/" class="logo">
-        <img src="/src/icons/Logo.png" class="logo" alt="logo" /></a
-    >
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <nav>
-        <ul>
-            <li>
-                <a href="#products"
-                    >Productos <Icon
-                        name="icon-park-outline:ad-product"
-                        class="icon"
-                    /></a
-                >
-            </li>
-            <li>
-                <a href="#ubicacion"
-                    >Ubicacion <Icon
-                        name="ic:baseline-location-on"
-                        class="icon"
-                    /></a
-                >
-            </li>
-        </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-    </label>
+<header aria-label="Encabezado de la Web">
+   <a aria-label="Logo de Zingueria Marquez" href="/" class="logo">
+      <img src="/src/icons/Logo.png" class="logo" alt="Logo de Zingueria Marquez" />
+   </a>
+   <input aria-label="Menu" type="checkbox" id="nav-toggle" class="nav-toggle" />
+   <nav aria-label="Barra de Navegacion">
+      <ul>
+         <li>
+            <a href="#products">
+               Productos
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                  viewBox="0 0 24 24">
+                  <path
+                     class="icon"
+                     fill="currentColor"
+                     d="M6 22q-.825 0-1.413-.588T4 20V8q0-.825.588-1.413T6 6h2q0-1.65 1.175-2.825T12 2q1.65 0 2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.588 1.413T18 22H6Zm0-2h12V8h-2v2q0 .425-.288.713T15 11q-.425 0-.713-.288T14 10V8h-4v2q0 .425-.288.713T9 11q-.425 0-.713-.288T8 10V8H6v12Zm4-14h4q0-.825-.588-1.413T12 4q-.825 0-1.413.588T10 6ZM6 20V8v12Z">
+                  </path>
+               </svg>
+            </a>
+         </li>
+         <li>
+            <a href="#trabajos">
+               Trabajos a Medida <Icon class="icon" name="ph:ruler" />
+            </a>
+         </li>
+         <li>
+            <a href="#ubicacion">
+               Ubicacion <Icon name="ic:baseline-location-on" class="icon" />
+            </a>
+         </li>
+      </ul>
+   </nav>
+   <label aria-label="Menu" for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+   </label>
 </header>
 
 <style lang="scss">
-    :root {
-        --background: #1f202368;
-    }
+   *,
+   *::before,
+   *::after {
+      box-sizing: border-box;
+   }
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+   header {
+      opacity: 0;
+      top: -30px;
+      scroll-snap-align: center;
+      background: var(--background);
+      backdrop-filter: blur(24px);
+      text-align: center;
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+   }
+   .logo {
+      max-width: 100px;
+   }
+   nav {
+      position: absolute;
+      text-align: left;
+      top: 100%;
+      left: 0;
+      background: linear-gradient(
+         130deg,
+         var(--background),
+         transparent,
+         transparent
+      );
+      width: 100%;
+      height: 100vh;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: all 0.3s;
+      ul {
+         transform: translateY(-30px);
+         margin: 0;
+         padding: 0;
+         list-style: none;
+      }
 
-    header {
-        scroll-snap-align: center;
-        background: var(--background);
-        backdrop-filter: blur(24px);
-        text-align: center;
-        position: absolute;
-        z-index: 999;
-        width: 100%;
-    }
-    .logo {
-        max-width: 100px;
-    }
-    nav {
-        position: absolute;
-        text-align: left;
-        top: 100%;
-        left: 0;
-        background: var(--background);
-        width: 100%;
-        transform: scale(1, 0);
-        transform-origin: top;
-        transition: all 0.3s;
+      li {
+         margin: 0.5em;
+         opacity: 0;
+         font-size: var(--step--1);
+         transition: all 0.3s;
+         font-weight: 700;
+         width: max-content;
+      }
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
+      li:hover {
+         transform: scale(1.05);
+      }
 
-        li {
-            transition: all 0.3s;
-            font-weight: 700;
-        }
+      .icon {
+         margin: 5px;
+         width: 1.15em;
+         color: #ededed;
+         transition: all 0.3s;
+      }
 
-        li:hover {
-            transform: scale(1.05);
-        }
+      a {
+         display: flex;
+         align-items: center;
+         color: var(--white);
+         text-decoration: none;
+         font-size: 1.2rem;
+         text-transform: uppercase;
+         opacity: 0;
+         transition: all 0.3s;
+      }
 
-        .icon {
-            margin: 5px;
-            width: 1.15em;
-            color: #ededed;
-            transition: all 0.3s;
-        }
-
-        a {
-            display: flex;
-            align-items: center;
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            opacity: 0;
-            transition: all 0.3s;
-        }
-
-        a:hover {
+      a:hover {
+         color: #888;
+         :first-child {
             color: #888;
-            :first-child {
-                color: #888;
-            }
-        }
-    }
-    .nav-toggle {
-        position: absolute !important;
-        top: -9999px !important;
-        left: -9999px !important;
-    }
+         }
+      }
+   }
+   .nav-toggle {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+   }
 
-    .nav-toggle-label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 1em;
-        height: 100%;
-        display: flex;
-        align-items: center;
+   .nav-toggle-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1em;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
-        span,
-        span::before,
-        span::after {
-            display: block;
-            background: #eee;
-            height: 2px;
-            width: 2em;
-            border-radius: 2px;
-            position: relative;
-        }
-        span::before,
-        span::after {
-            content: "";
-            position: absolute;
-        }
+      span,
+      span::before,
+      span::after {
+         display: block;
+         background: #eee;
+         height: 2px;
+         width: 2em;
+         border-radius: 2px;
+         position: relative;
+      }
+      span::before,
+      span::after {
+         content: "";
+         position: absolute;
+      }
 
-        span::before {
-            bottom: 7px;
-        }
+      span::before {
+         bottom: 7px;
+      }
 
-        span::after {
-            top: 7px;
-        }
-    }
+      span::after {
+         top: 7px;
+      }
+   }
 
-    .nav-toggle:checked ~ nav {
-        transform: scale(1, 1);
+   .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
 
-        a {
-            opacity: 1;
-            transition: opacity 250ms ease-in-out 250ms;
-        }
-    }
+      a {
+         opacity: 1;
+         transition: opacity 250ms ease-in-out 250ms;
+      }
+   }
 
-    @media screen and (min-width: 800px) {
-        .nav-toggle-label {
-            display: none;
-        }
+   @media screen and (min-width: 1200px) {
+      .nav-toggle-label {
+         display: none;
+      }
+      header {
+         display: grid;
+         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+      }
+      .logo {
+         grid-column: 1 / 3;
+         margin-left: 4rem;
+      }
 
-        header {
-            display: grid;
-            grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-        }
+      nav {
+         all: unset;
+         position: relative;
+         text-align: left;
+         transition: none;
+         transform: scale(1, 1);
+         background: none;
+         top: initial;
+         left: initial;
 
-        .logo {
-            grid-column: 1 / 3;
-            margin-left: 4rem;
-        }
+         grid-column: 3 / 4;
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+      }
 
-        nav {
-            all: unset;
-            position: relative;
-            text-align: left;
-            transition: none;
-            transform: scale(1, 1);
-            background: none;
-            top: initial;
-            left: initial;
+      nav ul {
+         display: flex;
+      }
 
-            grid-column: 3 / 4;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
+      nav li {
+         margin-left: 3em;
+         margin-bottom: 0;
+      }
 
-        nav ul {
-            display: flex;
-        }
+      nav a {
+         opacity: 1;
+         position: relative;
+      }
 
-        nav li {
-            margin-left: 3em;
-            margin-bottom: 0;
-        }
-
-        nav a {
-            opacity: 1;
-            position: relative;
-        }
-
-        nav a:hover::before {
-            transform: scale(1, 1);
-        }
-    }
+      nav a:hover::before {
+         transform: scale(1, 1);
+      }
+   }
+   @media screen and (max-width: 550px) {
+      header {
+         height: 5em;
+      }
+   }
 </style>

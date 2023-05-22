@@ -3,151 +3,197 @@ import { Icon } from "astro-icon";
 ---
 
 <div class="nosotros">
-    <div class="custom-shape-divider-bottom-1681256158">
-        <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-        >
-            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"
-            ></path>
-        </svg>
-    </div>
-    <div class="container">
-        <h3 class="title" id="ubicacion">Donde Estamos?</h3>
-        <p class="adress-container">
-            <Icon name="ic:baseline-location-on" class="icon" />Av. Brig. Gral.
-            Juan Manuel de Rosas 2220
-        </p>
-        <div class="flex-2">
-            <div class="map-container">
-                <iframe
-                    class="map"
-                    src="https://maps.google.com/maps?width=100%25&hl=es&q=Zingueria%20Marquez%20Av.%20Brig.%20Gral.%20Juan%20Manuel%20de%20Rosas%202220,%20B1655%20Jos%C3%A9%20Le%C3%B3n%20Su%C3%A1rez,%20Provincia%20de%20Buenos%20Aires+(Zingueria%20Marquez)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
-                    ><a href="https://www.gps.ie/car-satnav-gps/">Sat Navs</a></iframe
-                >
-            </div>
-            <img
-                class="img"
-                src="/src/img/frente.jpg"
-                alt="Frente Local Zingueria Marquez"
-            />
-        </div>
-    </div>
+   <div class="custom-shape-divider-top">
+      <svg
+         data-name="Layer 1"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1200 120"
+         preserveAspectRatio="none">
+         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+      </svg>
+   </div>
+   <div class="container">
+      <h3 class="nosotros-title" id="ubicacion">Donde Estamos?</h3>
+      <p class="adress-container">
+         <Icon name="ic:baseline-location-on" class="icon" />Av. Brig. Gral. Juan
+         Manuel de Rosas 2220
+      </p>
+      <div class="flex-2">
+         <div class="map-container">
+            <iframe
+               title="mapa"
+               class="map"
+               src="https://maps.google.com/maps?width=100%25&hl=es&q=Zingueria%20Marquez%20Av.%20Brig.%20Gral.%20Juan%20Manuel%20de%20Rosas%202220,%20B1655%20Jos%C3%A9%20Le%C3%B3n%20Su%C3%A1rez,%20Provincia%20de%20Buenos%20Aires+(Zingueria%20Marquez)&t=&z=16&ie=UTF8&iwloc=B&output=embed">
+               <a href="https://www.gps.ie/car-satnav-gps/"> Sat Navs </a>
+            </iframe>
+         </div>
+         <img
+            class="img"
+            src="/src/img/frente.webp"
+            alt="Frente Local Zingueria Marquez"
+         />
+      </div>
+      <div class="back-container">
+         <a href="#hero" class="back-to-top"
+            >Volver Arriba <Icon class="icon" name="ph:arrow-up-bold" />
+         </a>
+      </div>
+   </div>
 </div>
 
 <style lang="scss">
-    .adress-container {
-        display: flex;
-        align-items: center;
-    }
-    .icon {
-        width: 1.15em;
-        margin: auto 0;
-        animation: salto 1000ms infinite;
-    }
-    @keyframes salto {
-        40%,
-        60% {
-            transform: translateY(-0.3em);
-        }
-    }
-    .custom-shape-divider-bottom-1681256158 {
-        margin-top: 15em;
-        position: relative;
-        bottom: 150px;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
+   .nosotros {
+      background-color: var(--dark-grey);
+      color: var(--white);
+      height: max-content;
 
-        svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 150px;
-        }
+      .container {
+         display: flex;
+         flex-direction: column;
+         margin: 0 auto;
+         max-width: 80vw;
+      }
+      .nosotros-title {
+         width: max-content;
+         opacity: 0;
+         font-size: var(--step-2);
+         font-weight: 800;
+      }
+      p {
+         margin-top: 2em;
+         font-size: var(--step-1);
+         justify-self: flex-start;
+         align-self: center;
+         text-align: center;
+      }
+      .flex-2 {
+         margin-bottom: 5%;
+         display: flex;
+         justify-content: space-between;
+         gap: 2em;
 
-        .shape-fill {
-            fill: var(--dark-grey);
-        }
-    }
-    .nosotros {
-        background-color: var(--dark-grey);
-        color: var(--white);
-        height: max-content;
-        margin-bottom: 5%;
+         .img {
+            width: 700px;
+            max-width: 100%;
+            min-width: 15em;
+            min-height: 13em;
+            max-height: 43vw;
+            object-fit: cover;
+            border-radius: 5px;
+         }
+         .map {
+            width: 700px;
+            max-width: 100%;
+            min-width: 10em;
+            height: 560px;
+            min-height: 13em;
+            max-height: 43vw;
+            object-fit: cover;
+         }
+      }
+      .back-container {
+         font-size: var(--step--1);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 5em;
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-            max-width: 80vw;
-        }
-        .title {
-            font-size: var(--step-2);
-            font-weight: 800;
-        }
-        p {
-            font-size: var(--step-1);
-            justify-self: flex-start;
-            align-self: center;
-            text-align: center;
-        }
-        .flex-2 {
-            margin-bottom: 15%;
-            display: flex;
-            justify-content: space-evenly;
-            gap: 2em;
-
-            .img {
-                width: 700px;
-                max-width: 100%;
-                min-width: 15em;
-                height: min-content;
-                object-fit: cover;
-                border-radius: 5px;
+         .back-to-top {
+            text-decoration: none;
+            color: var(--white);
+            margin-right: 1em;
+         }
+         .icon {
+            width: 1em;
+            animation: arriba 1000ms infinite;
+         }
+         @keyframes arriba {
+            0% {
+               transform: translateY(0.2em);
             }
-            .map {
-                width: 300px;
-                max-width: 100%;
-                min-width: 10em;
-                height: 560px;
-                min-height: 13em;
-                max-height: 43vw;
-                object-fit: cover;
+
+            60% {
+               transform: translateY(-0.6em);
             }
-        }
-    }
+            100% {
+               transform: translateY(0.2em);
+            }
+         }
+      }
+   }
+   .adress-container {
+      display: flex;
+      align-items: center;
+   }
+   .icon {
+      width: 1.15em;
+      margin: auto 0;
+      animation: salto 1000ms infinite;
+   }
+   @keyframes salto {
+      0% {
+         transform: translateY(0.1em) scaleY(0.7);
+      }
+      40%,
+      60% {
+         transform: translateY(-0.6em) scaleY(1);
+      }
+      100% {
+         transform: translateY(0.1em) scaleY(0.7);
+      }
+   }
+   .custom-shape-divider-top {
+      position: relative;
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotateX(180deg);
 
-    @media screen and (max-width: 880px) {
-        .title {
-            text-align: center;
-        }
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 100px;
+      }
 
-        .img {
-            max-height: 40vw !important;
-            min-width: 10em !important;
-            object-fit: contain !important;
-        }
-        .map {
-            max-height: 40vw !important;
-            min-width: 10px !important;
-            min-height: 90px !important;
-        }
-    }
-    @media screen and (max-width: 550px) {
-        .flex-2 {
+      .shape-fill {
+         fill: var(--dark-grey);
+      }
+   }
+
+   @media screen and (max-width: 880px) {
+      .nosotros-title {
+         align-self: center;
+      }
+
+      .img {
+         max-height: 40vw !important;
+         min-width: 10em !important;
+         min-height: 90px !important;
+      }
+      .map {
+         max-height: 40vw !important;
+         min-width: 10px !important;
+         min-height: 90px !important;
+      }
+   }
+   @media screen and (max-width: 550px) {
+      .nosotros {
+         p {
+            margin-top: 3em;
+         }
+         .flex-2 {
             flex-direction: column;
             align-items: center;
-        }
-        .img {
-            max-height: 80vw !important;
-        }
-        .map {
-            max-height: 60vw !important;
-        }
-    }
+         }
+      }
+      .img {
+         max-height: 80vw !important;
+      }
+      .map {
+         max-height: 60vw !important;
+      }
+   }
 </style>

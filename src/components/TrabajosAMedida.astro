@@ -1,0 +1,244 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="trabajos-container">
+   <div class="custom-shape-divider-top">
+      <svg
+         data-name="Layer 1"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1200 120"
+         preserveAspectRatio="none">
+         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+      </svg>
+   </div>
+   <div class="container">
+      <h3 class="trabajos-title" id="trabajos">
+         Trabajos a Medida <Icon width=".8em" name="ph:ruler" />
+      </h3>
+      <div class="galeria">
+         <div class="trabajos-card">
+            <img
+               src="/src/img/trabajo-a-medida-3.webp"
+               alt="Campana Extractora a Medida"
+            />
+            <p>Campana</p>
+         </div>
+         <div class="trabajos-card">
+            <img
+               src="/src/img/trabajo-a-medida-2.webp"
+               alt="Campana Extractora a Medida"
+            />
+            <p>Campana</p>
+         </div>
+         <div class="trabajos-card">
+            <img
+               src="/src/img/trabajo-a-medida-1.webp"
+               alt="Campana Extractora a Medida"
+            />
+            <p>Campana</p>
+         </div>
+         <div class="trabajos-card">
+            <img src="/src/img/trabajo-a-medida-4.webp" alt="Trampilla a Medida" />
+            <p>Trampilla</p>
+         </div>
+         <div class="trabajos-card">
+            <img src="/src/img/trabajo-a-medida-5.webp" alt="Trampilla a Medida" />
+            <p>Trampilla</p>
+         </div>
+         <div class="trabajos-card">
+            <img src="/src/img/trabajo-a-medida-6.webp" alt="Claraboya a Medida" />
+            <p>Claraboya</p>
+         </div>
+      </div>
+      <a
+         aria-label="Contactenos via WhatsApp"
+         id="contactar-btn"
+         href="https://api.whatsapp.com/send?phone=5491130206654">
+         <button>
+            <div class="svg-wrapper-1">
+               <div class="svg-wrapper">
+                  <Icon class="social-logo" name="ph:whatsapp-logo-light" />
+               </div>
+               <span>Contactar</span>
+            </div>
+         </button>
+      </a>
+   </div>
+   <div class="custom-shape-divider-bottom">
+      <svg
+         data-name="Layer 1"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1200 120"
+         preserveAspectRatio="none">
+         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+      </svg>
+   </div>
+</div>
+
+<style lang="scss">
+   .trabajos-container {
+      background-color: var(--dark-grey);
+      color: var(--white);
+
+      .container {
+         display: flex;
+         flex-direction: column;
+         margin: 0 auto;
+         max-width: 80vw;
+         .trabajos-title {
+            opacity: 0;
+            position: relative;
+            top: -2em;
+            font-size: var(--step-2);
+            font-weight: 800;
+         }
+         .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+            gap: 3rem;
+            padding-inline-start: 0;
+
+            .trabajos-card {
+               display: flex;
+               flex-direction: column;
+               justify-self: center;
+               img {
+                  width: 100%;
+                  max-width: 23em;
+                  aspect-ratio: 1/2;
+               }
+               p {
+                  padding-top: 0.5em;
+                  width: 100%;
+                  height: 2em;
+                  text-align: center;
+                  font-size: var(--step--1);
+                  font-weight: 700;
+                  letter-spacing: 4px;
+                  background-color: rgba(38, 38, 38, 0.642);
+                  position: relative;
+                  bottom: 3.5em;
+               }
+            }
+         }
+
+         a {
+            opacity: 0;
+            display: flex;
+            align-self: center;
+            width: max-content;
+            position: relative;
+            right: 80px;
+         }
+         button {
+            cursor: pointer;
+            width: max-content;
+            font-family: inherit;
+            font-size: 18px;
+            background: linear-gradient(to bottom, #20e120 0%, #278f1e 100%);
+            color: white;
+            padding: 0.8em 1.2em;
+            margin: 0 auto;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            &:hover {
+               transform: translateY(-3px);
+               box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            &:active {
+               transform: scale(0.95);
+               box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            span {
+               display: block;
+               margin-left: 0.4em;
+               transition: all 0.3s;
+            }
+
+            .social-logo {
+               width: 25px;
+               height: 25px;
+               fill: white;
+               transition: all 0.3s;
+            }
+            .svg-wrapper-1 {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            .svg-wrapper {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 40px;
+               height: 40px;
+               border-radius: 50%;
+               background-color: rgba(255, 255, 255, 0.2);
+               margin-right: 0.5em;
+               transition: all 0.3s;
+            }
+
+            &:hover .svg-wrapper {
+               background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            &:hover .social-logo {
+               transform: scale(1.2);
+            }
+         }
+      }
+   }
+
+   .custom-shape-divider-top {
+      margin-top: 15em;
+      position: relative;
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 100px;
+      }
+
+      .shape-fill {
+         fill: var(--dark-grey);
+      }
+   }
+
+   .custom-shape-divider-bottom {
+      margin-bottom: 25em;
+      position: relative;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 100px;
+         transform: rotateY(180deg);
+      }
+
+      .shape-fill {
+         fill: var(--dark-grey);
+      }
+   }
+   @media screen and (max-width: 880px) {
+      .trabajos-title {
+         text-align: center;
+      }
+   }
+</style>

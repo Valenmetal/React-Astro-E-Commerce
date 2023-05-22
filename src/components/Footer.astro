@@ -2,83 +2,77 @@
 import { Icon } from "astro-icon";
 ---
 
-<footer class="footer_container">
-    <div class="footer_list">
-        <a href="" class="footer_item">Contacto</a>
-        <a href="" class="footer_item">Ubicacion</a>
-    </div>
-
-    <div class="footer-info">
-        <div class="brand">Marca</div>
-        <div class="social-container">
+<footer aria-label="Footer" class="footer-container" id="footer">
+   <div class="footer-info">
+      <div class="brand">Zingueria Marquez</div>
+      <div class="social-container">
+         <a aria-label="Instagram" href="https://www.instagram.com/zm.grz/">
             <Icon class="social-logo" name="ph:instagram-logo" />
-            <Icon class="social-logo" name="ph:whatsapp-logo-light" />
-        </div>
-    </div>
+         </a>
+         <a
+            aria-label="WhatsApp"
+            href="https://api.whatsapp.com/send?phone=5491130206654"
+            ><Icon class="social-logo" name="ph:whatsapp-logo-light" />
+         </a>
+      </div>
+   </div>
 </footer>
 
 <style lang="scss">
-    .footer_container {
-        bottom: 0em;
-        width: 100%;
-        background-color: var(--dark-grey);
-        color: var(--white);
+   .footer-container {
+      bottom: 0em;
+      width: 100%;
+      background-color: var(--dark-grey);
+      color: var(--white);
 
-        .footer_list {
-            font-size: var(--step--1);
+      .footer-info {
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-between;
+         height: 7em;
+         max-width: 80vw;
+
+         .brand {
+            align-self: center;
+         }
+         .social-container {
             display: flex;
             align-items: center;
+
+            a {
+               color: var(--white);
+               margin-right: 0.4em;
+            }
+            .social-logo {
+               width: 2.5em;
+               transition: all 0.3s;
+
+               &:hover {
+                  transform: scale(1.09);
+               }
+            }
+         }
+      }
+
+      @media screen and (max-width: 765px) {
+         .footer-list {
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            height: 5em;
-        }
-        .footer_item {
-            text-decoration: none;
-            color: var(--white);
-            margin-right: 1em;
-        }
-        .footer-info {
-            display: flex;
-            justify-content: space-between;
 
-            .brand {
-                align-self: center;
-                margin: 0 0 0 0.5em;
+            :nth-child(1),
+            :nth-child(2) {
+               margin-right: 0;
             }
-            .social-container {
-                margin-right: 1%;
-                justify-content: end;
 
-                .social-logo {
-                    width: var(--step-1);
-                    transition: all 0.3s;
-
-                    &:hover {
-                        transform: scale(1.09);
-                    }
-                }
+            :nth-child(2) {
+               margin-top: 1em;
             }
-        }
-
-        @media screen and (max-width: 765px) {
-            .footer_list {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 10em;
-
-                :nth-child(1),
-                :nth-child(2) {
-                    margin-right: 0;
-                }
-
-                :nth-child(2) {
-                    margin-top: 1em;
-                }
-            }
-            .brand {
-                margin: 0;
-                align-self: center;
-            }
-        }
-    }
+         }
+         .brand {
+            margin: 0;
+            align-self: center;
+         }
+      }
+   }
 </style>

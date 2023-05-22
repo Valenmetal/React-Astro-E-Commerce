@@ -1,30 +1,56 @@
-<div class="hero">
-    <h1 class="title">
-        Zingueria <br /> Marquez
-    </h1>
+<div class="hero" id="hero">
+   <h1 class="hero-title" id="main-title">Zingueria Marquez</h1>
 </div>
 
 <style lang="scss">
-    .hero {
-        background: url("/src/img/chapa-fondo.jpg") no-repeat;
-        position: relative;
-        box-sizing: border-box;
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        .title {
-            color: var(--white);
-            text-shadow: black -5px 5px 10px;
-            z-index: 10;
-            font-size: var(--step-6);
-            font-weight: 800;
-            position: absolute;
-            letter-spacing: 5px;
-            top: 10%;
-            left: 5%;
-        }
-    }
+   .hero {
+      background: url("/src/img/chapa-fondo.webp") no-repeat;
+      position: relative;
+      box-sizing: border-box;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
 
-    @media screen and (max-width: 800px) {
-    }
+      .hero-title {
+         width: min-content;
+         opacity: 0;
+         color: var(--white);
+         text-shadow: black -5px 5px 10px;
+         z-index: 10;
+         font-size: var(--step-6);
+         font-weight: 800;
+         position: absolute;
+         letter-spacing: 5px;
+         top: 10%;
+      }
+   }
+
+   @media screen and (max-width: 1200px) {
+      .hero {
+         height: 70vh;
+      }
+      .hero-title {
+         text-align: center;
+         right: 0;
+         left: -5%;
+         top: 30% !important;
+         bottom: 0;
+         margin: auto;
+      }
+   }
+
+   @media screen and (max-width: 550px) {
+      .hero {
+         height: 50vh;
+      }
+      .hero-title {
+         top: 35% !important;
+      }
+   }
+   @media screen and (max-width: 350px) {
+      .hero-title {
+         top: 40% !important;
+         font-size: 2.5rem !important;
+      }
+   }
 </style>
