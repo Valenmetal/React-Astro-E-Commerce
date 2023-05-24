@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
    integrations: [react()],
-   site: "https://valenmetal.github.io",
-   base: "/React-Astro-E-Commerce",
+   /* site: "https://valenmetal.github.io",
+   base: "/React-Astro-E-Commerce", */
 });
