@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data from "../products.json";
+import data from "../../products.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { Orbit } from "@uiball/loaders";
 
