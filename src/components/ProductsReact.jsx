@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data from "/products.json";
+import data from "./products.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { Orbit } from "@uiball/loaders";
 
@@ -13,7 +13,7 @@ export default function Products() {
    const [loading, setLoading] = useState(false);
 
    const fetchData = async () => {
-      const response = await fetch("/products.json");
+      const response = await fetch("./products.json");
       const json = await response.json();
       setProducts(json);
       setLoading(true);
