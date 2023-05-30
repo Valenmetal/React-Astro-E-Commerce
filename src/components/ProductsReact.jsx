@@ -13,7 +13,7 @@ export default function Products() {
    const [loading, setLoading] = useState(false);
 
    const fetchData = async () => {
-      const response = await fetch("../../public/products.json");
+      const response = await fetch("/products.json");
       const json = await response.json();
       setProducts(json);
       setLoading(true);
