@@ -2,7 +2,7 @@ import{r as g,i as _t}from"./chunks/index.4dc3a8a5.js";const gn=[{id:1,name:"Cha
 
 \u2022 Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)
 
-\u2022 Ancho: 1 (Mts)`,src:"public/images/chapa-cincalum-1.webp",src2:"src/img/chapa-cincalum-2.webp",src3:"src/img/chapa-cincalum-3.webp",src4:"src/img/chapa-cincalum-4.webp",src5:"src/img/chapa-cincalum-5.webp",src6:"src/img/chapa-cincalum-6.webp",category:"chapas"},{id:2,name:"Chapa Galvanizada",description:"c27",description_2:`\u2022 Chapa galvanizada acanalada calibre 27
+\u2022 Ancho: 1 (Mts)`,src:"dfvbhjhjabvba",src2:"src/img/chapa-cincalum-2.webp",src3:"src/img/chapa-cincalum-3.webp",src4:"src/img/chapa-cincalum-4.webp",src5:"src/img/chapa-cincalum-5.webp",src6:"src/img/chapa-cincalum-6.webp",category:"chapas"},{id:2,name:"Chapa Galvanizada",description:"c27",description_2:`\u2022 Chapa galvanizada acanalada calibre 27
 
 \u2022 Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)
 
