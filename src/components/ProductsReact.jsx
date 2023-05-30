@@ -13,7 +13,7 @@ export default function Products() {
    const [loading, setLoading] = useState(false);
 
    const fetchData = async () => {
-      const response = await fetch("/products.json");
+      const response = await fetch("products.json");
       const json = await response.json();
       setProducts(json);
       setLoading(true);
@@ -171,10 +171,12 @@ export default function Products() {
                                  whileInView={{ opacity: 1, y: 70 }}
                                  key={val.id}
                                  className="link-card">
-                                 <a href={`/product-details/${val.id}`}>
+                                 <a
+                                    href={`/React-Astro-E-Commerce/product-details/${val.id}`}>
                                     <h3>{val.name}</h3>
                                  </a>
-                                 <a href={`/product-details/${val.id}`}>
+                                 <a
+                                    href={`/React-Astro-E-Commerce/product-details/${val.id}`}>
                                     <img src={val.src} alt={val.name} />
                                  </a>
                                  <p>{val.description}</p>

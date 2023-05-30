@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
-    const data = await fetch("products.json").then((response) =>
+    const data = await fetch("./products.json").then((response) =>
         response.json()
     );
     return data.map((prod) => ({
@@ -26,31 +26,31 @@ import { Icon } from "astro-icon";
             </a>
             <h2 class="titulo-prod">{prod.name}</h2>
             <div class="gallery">
-                <img class="prodImg" src={`../../../${prod.src}`} alt="Product Image" />
+                <img class="prodImg" src={`../../${prod.src}`} alt="Product Image" />
                 
                 {
                     prod.src2 ?
-                    <img class="prodImg" src={`../../../${prod.src2}`} alt="Product Image" />
+                    <img class="prodImg" src={`../../${prod.src2}`} alt="Product Image" />
                     : {}
                 }
                 {
                     prod.src3 ?
-                    <img class="prodImg" src={`../../../${prod.src3}`} alt="Product Image" />
+                    <img class="prodImg" src={`../../${prod.src3}`} alt="Product Image" />
                     : {}
                 }
                 {
                     prod.src4 ?
-                    <img class="prodImg" src={`../../../${prod.src4}`} alt="Product Image" />
+                    <img class="prodImg" src={`../../${prod.src4}`} alt="Product Image" />
                     : {}
                 }
                 {
                     prod.src5 ?
-                <img class="prodImg" src={`../../../${prod.src5}`} alt="Product Image" />
+                <img class="prodImg" src={`../../${prod.src5}`} alt="Product Image" />
                 : {}
                 }
                 {
                     prod.src6 ?
-                    <img class="prodImg" src={`../../../${prod.src6}`} alt="Product Image" />
+                    <img class="prodImg" src={`../../${prod.src6}`} alt="Product Image" />
                     : {}
                 }
             </div>
