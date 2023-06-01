@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import "../../styles/product_detail.css"
+
 export async function getStaticPaths() {
     const data = await fetch("./products.json").then((response) =>
         response.json()
