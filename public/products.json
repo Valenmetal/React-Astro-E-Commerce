@@ -180,7 +180,7 @@
       "description": "Aislante Espuma Aluminizado",
       "description_2": "• Aislante Espuma una cara Aluminizada\n\n• Medida: 20Mts²\n\n• Espesor: 10mm",
       "src": "./images/espuma-aluminio-1.webp",
-      "src2": "./images/espuma-aluminio-2.jpeg",
+      "src2": "./images/espuma-aluminio-2.webp",
       "src3": "./images/espuma-aluminio-3.webp",
       "src4": "./images/espuma-aluminio-4.webp",
       "category": "aislantes"
@@ -510,9 +510,9 @@
       "description": "2 Mts",
       "description_2": "• Molduras decorativas para techos, Poliestireno extruido\n -2 Mts\n\n• DE05: 35mm\n\n• DE09: 44mm\n\n• DE13: 52mm",
       "src": "./images/molduras.webp",
-      "src2": "./images/de-05.webp",
-      "src3": "./images/de-09.webp",
-      "src4": "./images/de-13.webp",
+      "src2": "./images/De-05.webp",
+      "src3": "./images/De-09.webp",
+      "src4": "./images/De-13.webp",
       "category": "seco"
    },
    {
