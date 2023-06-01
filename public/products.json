@@ -64,10 +64,10 @@
       "name": "Trapezoidal T101 Cincalum",
       "description": "c25",
       "description_2": "• Chapa Trapezoidal T101 Cincalum calibre 25\n\n• Colores: Verde, Gris, Negro, Bordo, Azul y Blanco\n\n• Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)\n\n• Ancho: 1 (Mts)",
-      "src": "./images/chapa-trapezoidal-T101.webp",
-      "src2": "./images/chapa-trapezoidal-T101-2.webp",
-      "src3": "./images/chapa-trapezoidal-T101-3.webp",
-      "src4": "./images/chapa-trapezoidal-T101-4.webp",
+      "src": "./images/Chapa-Trapezoidal-T101.webp",
+      "src2": "./images/Chapa-Trapezoidal-T101-2.webp",
+      "src3": "./images/Chapa-Trapezoidal-T101-3.webp",
+      "src4": "./images/Chapa-Trapezoidal-T101-4.webp",
       "category": "chapas"
    },
    {
@@ -75,12 +75,12 @@
       "name": "Trapezoidal T101 Color",
       "description": "Gris-Negro-Bordo-Azul-Verde",
       "description_2": "• Chapa Color Trapezoidal T101 calibre 25\n\n• Colores: Verde, Gris, Negro, Bordo, Azul y Blanco\n\n• Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)\n\n• Ancho: 1 (Mts)",
-      "src": "./images/chapa-trapezoidal-T101-Verde.webp",
-      "src2": "./images/chapa-trapezoidal-T101-Gris.webp",
-      "src3": "./images/chapa-trapezoidal-T101-Negro.webp",
-      "src4": "./images/chapa-trapezoidal-T101-Bordo.webp",
-      "src5": "./images/chapa-trapezoidal-T101-Azul.webp",
-      "src6": "./images/chapa-trapezoidal-T101-Blanco.webp",
+      "src": "./images/Chapa-Trapezoidal-T101-Verde.webp",
+      "src2": "./images/Chapa-Trapezoidal-T101-Gris.webp",
+      "src3": "./images/Chapa-Trapezoidal-T101-Negro.webp",
+      "src4": "./images/Chapa-Trapezoidal-T101-Bordo.webp",
+      "src5": "./images/Chapa-Trapezoidal-T101-Azul.webp",
+      "src6": "./images/Chapa-Trapezoidal-T101-Blanco.webp",
       "category": "chapas"
    },
    {
@@ -190,8 +190,8 @@
       "name": "Lana de Vidrio Isover",
       "description": "Rolac Plata Cubierta HR",
       "description_2": " Lana de Vidrio Isover Rolac Plata Cubierta HR una cara de aluminio\n\n- Medida: 21,6Mts²\n\n- Espesor: 50mm\n\n• Bajo coeficiente de conductividad.\n\n• Coeficiente constante.\n\n• Contribuye al ahorro energético.\n\n• Fácil de cortar e instalar.\n\n• No es corrosiva.\n\n• Reduce las emisiones de CO2 durante el uso del inmueble.",
-      "src": "./images/lana-rosa-1.webp",
-      "src2": "./images/lana-rosa-2.webp",
+      "src": "./images/Lana-rosa-1.webp",
+      "src2": "./images/Lana-rosa-2.webp",
       "src3": "./images/lana-rosa-3.webp",
       "category": "aislantes"
    },
@@ -493,7 +493,7 @@
       "name": "Cintas",
       "description": "Para Placa de Yeso",
       "description_2": "• Cinta para Placa de Yeso Tramada Autoadhesiva:\n -90 Mts\n\n• Cinta de papel: \n -23 Mts\n -75 Mts\n -150 Mts",
-      "src": "./images/cintas.webp",
+      "src": "./images/Cintas.webp",
       "category": "otros"
    },
    {
