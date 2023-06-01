@@ -64,10 +64,10 @@
       "name": "Trapezoidal T101 Cincalum",
       "description": "c25",
       "description_2": "• Chapa Trapezoidal T101 Cincalum calibre 25\n\n• Colores: Verde, Gris, Negro, Bordo, Azul y Blanco\n\n• Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)\n\n• Ancho: 1 (Mts)",
-      "src": "./images/chapa-trapezoidal-t101.webp",
-      "src2": "./images/chapa-trapezoidal-t101-2.webp",
-      "src3": "./images/chapa-trapezoidal-t101-3.webp",
-      "src4": "./images/chapa-trapezoidal-t101-4.webp",
+      "src": "./images/chapa-trapezoidal-T101.webp",
+      "src2": "./images/chapa-trapezoidal-T101-2.webp",
+      "src3": "./images/chapa-trapezoidal-T101-3.webp",
+      "src4": "./images/chapa-trapezoidal-T101-4.webp",
       "category": "chapas"
    },
    {
@@ -75,12 +75,12 @@
       "name": "Trapezoidal T101 Color",
       "description": "Gris-Negro-Bordo-Azul-Verde",
       "description_2": "• Chapa Color Trapezoidal T101 calibre 25\n\n• Colores: Verde, Gris, Negro, Bordo, Azul y Blanco\n\n• Largo: 3 - 3.5 - 4 - 4.5 - 5 - 5.5 - 6 (Mts)\n\n• Ancho: 1 (Mts)",
-      "src": "./images/chapa-trapezoidal-t101-verde.webp",
-      "src2": "./images/chapa-trapezoidal-t101-gris.webp",
-      "src3": "./images/chapa-trapezoidal-t101-negro.webp",
-      "src4": "./images/chapa-trapezoidal-t101-bordo.webp",
-      "src5": "./images/chapa-trapezoidal-t101-azul.webp",
-      "src6": "./images/chapa-trapezoidal-t101-blanco.webp",
+      "src": "./images/chapa-trapezoidal-T101-Verde.webp",
+      "src2": "./images/chapa-trapezoidal-T101-Gris.webp",
+      "src3": "./images/chapa-trapezoidal-T101-Negro.webp",
+      "src4": "./images/chapa-trapezoidal-T101-Bordo.webp",
+      "src5": "./images/chapa-trapezoidal-T101-Azul.webp",
+      "src6": "./images/chapa-trapezoidal-T101-Blanco.webp",
       "category": "chapas"
    },
    {
