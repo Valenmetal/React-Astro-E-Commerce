@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import "../../styles/product_detail.css"
 export async function getStaticPaths() {
     const data = await fetch("./products.json").then((response) =>
         response.json()
@@ -18,7 +19,7 @@ import { Icon } from "astro-icon";
 <Layout title={prod.name}>
     <main>
         <div class="product">
-            <a class="backBtnPos" href="/#products">
+            <a class="backBtnPos" href="/React-Astro-E-Commerce/#products">
                 <button class="backBtn">
                     <Icon name="charm:arrow-left" class="icon" />
                     Volver
@@ -60,7 +61,7 @@ import { Icon } from "astro-icon";
     </main>
 </Layout>
 
-<style>
+<style lang="scss">
     main {
         max-width: 70vw;
         margin: 0 auto;
